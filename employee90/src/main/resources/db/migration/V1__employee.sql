@@ -1,0 +1,6 @@
+use employee;
+
+CREATE TABLE employeez (
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(45) NOT NULL,
+salary INT NOT NULL,PRIMARY KEY (id));
