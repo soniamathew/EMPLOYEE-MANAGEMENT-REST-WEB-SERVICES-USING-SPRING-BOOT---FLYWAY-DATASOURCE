@@ -86,7 +86,7 @@ In the MySQLWokrkbench :
      Then create the table employeez in the database employeez using the query : (These steps are not needed when we are using Flyway, this can be done during versioning of data. Version 1 creates the tale)
 
 
-    CREATE TABLE `employeez`.`employeez` (
+    CREATE TABLE `employee`.`employeedata` (
     `id` INT GENERATED ALWAYS AS (),
     `name` VARCHAR(45) NOT NULL,
     `salary` VARCHAR(45) NOT NULL,
