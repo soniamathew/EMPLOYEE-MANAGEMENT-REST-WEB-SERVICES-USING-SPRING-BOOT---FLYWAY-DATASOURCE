@@ -1,14 +1,9 @@
 package com.employee.employee.sample.entity;
-
 import javax.persistence.*;
-import java.io.Serializable;
-
 
 @Entity
-@Table(name="employeez")
-public class Employee implements Serializable{
-
-     private static final long serialVersionUID = 1L;
+@Table(name="employeedata")
+public class Employee {
     @Id
     @GeneratedValue(strategy = javax.persistence.GenerationType.IDENTITY )
     @Column(name = "id")
@@ -36,7 +31,6 @@ public class Employee implements Serializable{
     public void setSalary(int salary) {
         this.salary = salary;
     }
-
 
     @Override
     public String toString() {
