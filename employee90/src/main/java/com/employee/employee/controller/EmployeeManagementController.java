@@ -11,32 +11,23 @@ import org.springframework.web.util.UriComponentsBuilder;
 @RestController
 @RequestMapping("/api")
 public class EmployeeManagementController {
-
     @Autowired
     private EmployeeManagementService employeeManagementService;
-
 
 
   //create employee :
     @RequestMapping(value="/create", method = RequestMethod.POST)
     public ResponseEntity<String> getEmployee(@RequestBody Employee employee,UriComponentsBuilder builder) {
-       //createEmployee(employee);
-
-       boolean flag = createEmployee(employee);
-        if (flag == false) {
-            return new ResponseEntity<String>("success",HttpStatus.CREATED);
-        }
+        createEmployee(employee);
         HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(builder.path("/create").buildAndExpand(employee.getId()).toUri());
-        return new ResponseEntity<String>("success", HttpStatus.OK);
-     }
+        headers.setLocation(builder.path("/update").buildAndExpand(employee).toUri());
+        return new ResponseEntity<String>("success", HttpStatus.CREATED);
+    }
      public boolean createEmployee(Employee employee)
      {
       employeeManagementService.createEmployee(employee);
        return false;
      }
-
-
 
 
    //read the employee by id :
@@ -56,8 +47,6 @@ public class EmployeeManagementController {
     }
 
 
-
-
     //update the employee details :
     @RequestMapping(value = "/update", method = RequestMethod.PUT)
     public  ResponseEntity<Employee> changeEmployee(@RequestBody Employee employee, UriComponentsBuilder builder)
@@ -71,9 +60,6 @@ public class EmployeeManagementController {
    {
         employeeManagementService.updateEmployee(employee);
     }
-
-
-
 
 
    //delete employee by id :
