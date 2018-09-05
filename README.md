@@ -78,12 +78,12 @@ In MySQL.prefpane :
 
 
 
- In the MySQLWokrkbench : (These steps are not needed when we are using Flyway, this can be done during versioning of data.)
-
-    * First create a database named employeez using the query :
-    CREATE SCHEMA `employeez` ;
+In the MySQLWokrkbench : 
+    * First create a database named employee using the query :
+    CREATE SCHEMA `employee` ;
                                                                          
-    * Then create the table employeez in the database employeez using the query :
+   * Then create the table employeez in the database employeez using the query : (#These steps are not needed when we are using Flyway, this can be done during versioning of data. #Version 1 creates the tale)
+
 
     CREATE TABLE `employeez`.`employeez` (
     `id` INT GENERATED ALWAYS AS (),
