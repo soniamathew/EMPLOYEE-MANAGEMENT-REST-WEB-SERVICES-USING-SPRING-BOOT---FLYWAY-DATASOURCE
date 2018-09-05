@@ -82,7 +82,7 @@ In the MySQLWokrkbench :
     * First create a database named employee using the query :
     CREATE SCHEMA `employee` ;
                                                                          
-   * Then create the table employeez in the database employeez using the query : (#These steps are not needed when we are using Flyway, this can be done during versioning of data. #Version 1 creates the tale)
+   * Then create the table employeez in the database employeez using the query : (These steps are not needed when we are using Flyway, this can be done during versioning of data. Version 1 creates the tale)
 
 
     CREATE TABLE `employeez`.`employeez` (
